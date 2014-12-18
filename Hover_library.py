@@ -31,11 +31,10 @@ import time
 import RPi.GPIO as GPIO  
 
 # Check for RPi Revision and decide I2C bus
-if GPIO.RPI_REVISION == 1:  
+if GPIO.RPI_REVISION == 1:
     bus = smbus.SMBus(0)
 else:
-   bus = smbus.SMBus(1)
-
+    bus = smbus.SMBus(1)
 
 dict = {'00100010':'Right Swipe', '00100100':'Left Swipe', '00101000':'Up Swipe', '00110000':'Down Swipe', '01001000':'East Tap', '01000001':'South Tap', '01000010':'West Tap', '01000100':'North Tap', '01010000':'Center Tap'}
 
